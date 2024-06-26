@@ -39,13 +39,13 @@ export const ToolBarContainer = styled(Toolbar)(({ theme }) => ({
     },
     marginLeft: "32rem",
     flexDirection: "row",
-    gap: 75,
+    gap: 55,
   },
   "& .menu-item": {
     textDecoration: "none",
 
     "& .menu-text": {
-      fontSize: "1.1rem",
+      fontSize: "14px",
       color: theme.palette.text.primary,
       textTransform: "uppercase",
     },

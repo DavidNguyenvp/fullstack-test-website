@@ -106,24 +106,24 @@ export const Page = styled(Box)(({ theme }) => ({
   display: "flex",
   height: "100%",
   justifyContent: "center",
-  margin: "3rem 18rem",
+  margin: "2rem 18rem",
   "& .MuiPaper-elevation": {
     padding: "0.375rem 0",
   },
 
   [theme.breakpoints.down("md")]: {
-    margin: "3rem 2rem",
+    margin: "2rem 2rem",
   },
   background: theme.palette.common.white,
   "& .title": {
     color: theme.palette.text.primary,
-    marginTop: 30,
-    marginBottom: 80,
+    marginTop: 20,
+    marginBottom: 30,
   },
   "& .content": {
-    fontSize: "1.2rem",
+    fontSize: "1rem",
     color: theme.palette.text.secondary,
-    lineHeight: "30.5px",
+    lineHeight: "25px",
     "& a, p": {
       color: theme.palette.text.secondary,
     },
@@ -140,13 +140,13 @@ export const Page = styled(Box)(({ theme }) => ({
     },
 
     "& .MuiTypography-root": {
-      fontSize: "18px",
+      fontSize: "12px",
       fontWeight: "bold",
       lineHeight: "30px",
     },
     "& .time-title": {
       textTransform: "uppercase",
-      fontSize: "14px",
+      fontSize: "12px",
     },
     "& .MuiSvgIcon-root": {
       width: 50,
@@ -155,7 +155,7 @@ export const Page = styled(Box)(({ theme }) => ({
   },
 
   "& .divider": {
-    marginTop: "20px",
+    marginTop: "10px",
   },
   "& .yield": {
     marginTop: "10px",
@@ -165,7 +165,7 @@ export const Page = styled(Box)(({ theme }) => ({
     borderColor: theme.palette.customColors.trackBg,
     color: theme.palette.text.primary,
     fontWeight: "bold",
-    fontSize: "16px",
+    fontSize: "12px",
     textTransform: "capitalize",
     "& .MuiSvgIcon-root": {
       widht: 30,
