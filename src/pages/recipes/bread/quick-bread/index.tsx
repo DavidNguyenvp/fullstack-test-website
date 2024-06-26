@@ -38,9 +38,9 @@ const QickBread = () => {
           </Typography>
           <div
             className="content"
-            dangerouslySetInnerHTML={{ __html: product?.content || "<p></p>"}}
+            dangerouslySetInnerHTML={{ __html: product?.content || "<p></p>" }}
           />
-            
+
           <Box className="time">
             <AccessTimeIcon />
             <Box className="timeItems">
@@ -48,13 +48,15 @@ const QickBread = () => {
                 <Typography className="time-title">PREP</Typography>
                 <Typography>{product?.time.prep}</Typography>
               </Box>
-              <Box className="time-info">
-                <Typography className="time-title">Bake</Typography>
-                <Typography>{product?.time.bake}</Typography>
-              </Box>
-              <Box className="time-info">
-                <Typography className="time-title">Total</Typography>
-                <Typography>{product?.time.total}</Typography>
+              <Box className="right">
+                <Box className="time-info">
+                  <Typography className="time-title">Bake</Typography>
+                  <Typography>{product?.time.bake}</Typography>
+                </Box>
+                <Box className="time-info">
+                  <Typography className="time-title">Total</Typography>
+                  <Typography>{product?.time.total}</Typography>
+                </Box>
               </Box>
             </Box>
           </Box>
@@ -66,20 +68,22 @@ const QickBread = () => {
                 <Typography className="time-title">YIELD</Typography>
                 <Typography>{product?.yield}</Typography>
               </Box>
-              <Button
-                variant="outlined"
-                startIcon={<> + </>}
-                className="save-button"
-              >
-                Save Recipe
-              </Button>
-              <Button
-                variant="outlined"
-                startIcon={<LocalPrintshopOutlinedIcon />}
-                className="print-button"
-              >
-                Print
-              </Button>
+              <Box className="box-actions">
+                <Button
+                  variant="outlined"
+                  startIcon={<> + </>}
+                  className="save-button"
+                >
+                  Save Recipe
+                </Button>
+                <Button
+                  variant="outlined"
+                  startIcon={<LocalPrintshopOutlinedIcon />}
+                  className="print-button"
+                >
+                  Print
+                </Button>
+              </Box>
             </Box>
           </Box>
         </Grid>
@@ -130,15 +134,20 @@ export const Page = styled(Box)(({ theme }) => ({
   },
   "& .time, .yield": {
     display: "flex",
-    gap: 20,
+    gap: 15,
+
     alignItems: "center",
     marginTop: "50px",
     "& .timeItems, .yieldItems": {
       display: "flex",
+      justifyContent: "space-between",
       gap: 35,
       alignItems: "center",
     },
-
+    "& .right": {
+      display: "flex",
+      gap: 10,
+    },
     "& .MuiTypography-root": {
       fontSize: "12px",
       fontWeight: "bold",
@@ -149,8 +158,8 @@ export const Page = styled(Box)(({ theme }) => ({
       fontSize: "12px",
     },
     "& .MuiSvgIcon-root": {
-      width: 50,
-      height: 50,
+      width: 30,
+      height: 30,
     },
   },
 
@@ -160,18 +169,24 @@ export const Page = styled(Box)(({ theme }) => ({
   "& .yield": {
     marginTop: "10px",
   },
+  "& .box-actions": {
+    display: "flex",
+    gap: 5,
+  },
   "& .save-button, .print-button": {
-    height: "40px",
+    height: "30px",
     borderColor: theme.palette.customColors.trackBg,
     color: theme.palette.text.primary,
     fontWeight: "bold",
     fontSize: "12px",
     textTransform: "capitalize",
     "& .MuiSvgIcon-root": {
-      widht: 30,
-      height: 30,
+      widht: 20,
+      height: 20,
     },
+    borderRadius: 0,
   },
+
   "& .image-container": {
     maxWidth: "100%",
     margin: "0 auto",
